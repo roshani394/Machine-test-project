@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Software</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- App Header -->
+    <header class="app-header">
+        <input type="text" class="search-bar" placeholder="Search...">
+        <div class="icons">
+            <span class="bell-icon">🔔</span>
+            <span class="profile-icon">👤 Profile</span>
+        </div>
+    </header>
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <div class="dashboard-card">
+            <h3>Total Sales</h3>
+            <p>₹ 0.00</p>
+        </div>
+        <div class="dashboard-card">
+            <h3>Total Revenue</h3>
+            <p>₹ 0.00</p>
+        </div>
+    </section>
+
+    <!-- Customer Management -->
+    <section class="customer-management">
+        <h2>Customer Management</h2>
+        <form id="add-customer">
+            <input type="text" placeholder="Name" required>
+            <input type="text" placeholder="Gender" required>
+            <input type="text" placeholder="Contact" required>
+            <input type="email" placeholder="Email" required>
+            <button type="submit">Save Customer</button>
+        </form>
+
+        <table class="customer-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="customer-list">
+                <!-- Customer data will go here -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Inventory Management -->
+    <section class="inventory-management">
+        <h2>Inventory Management</h2>
+        <form id="add-product">
+            <input type="text" placeholder="Product Name" required>
+            <input type="number" placeholder="Product Price" required>
+            <input type="number" placeholder="Product Quantity" required>
+            <input type="text" placeholder="Product Brand" required>
+            <input type="text" placeholder="Product Supplier" required>
+            <input type="number" placeholder="Old Stock">
+            <input type="text" placeholder="Product Category" required>
+            <button type="submit">Save Product</button>
+        </form>
+
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Brand</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="product-list">
+                <!-- Product data will go here -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Billing System -->
+    <section class="billing-system">
+        <h2>Billing System</h2>
+        <form id="add-billing">
+            <select required>
+                <option value="" disabled selected>Select Customer</option>
+                <!-- Customer options will go here -->
+            </select>
+
+            <select required>
+                <option value="" disabled selected>Select Product</option>
+                <!-- Product options will go here -->
+            </select>
+            <button type="submit">Add Billing</button>
+        </form>
+
+        <table class="billing-table">
+            <thead>
+                <tr>
+                    <th>Customer</th>
+                    <th>Product</th>
+                    <th>Total Amount</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="billing-list">
+                <!-- Billing data will go here -->
+            </tbody>
+        </table>
+    </section>
+    <script defer src="index.js"></script>
+
+</body>
+</html>
